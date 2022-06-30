@@ -24,7 +24,8 @@ locations = data.location.unique().tolist()
 
 location_selector = sidebar.selectbox(
     "Select a Location",
-    locations
+    locations,
+    index=locations.index("Nepal")
 )
 st.markdown(f"# Currently Selected Location: {location_selector}")
 
