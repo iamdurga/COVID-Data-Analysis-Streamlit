@@ -69,5 +69,5 @@ if sidebar.checkbox("Comparison of Locations"):
 
         lrdf = ldf.groupby("location")[ccols].last().reset_index().sort_values(by=ccols,ascending=order)
         fig=lrdf[:top].iplot(kind="bar",x="location",y=ccols,subplots=subplots,
-                title=f"Comparasion of {', '.join(ccols)}.")
+                title=f"Comparasion of {', '.join(ccols)}.",asFigure=True)
         st.plotly_chart(fig, use_container_width=False)
