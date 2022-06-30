@@ -5,7 +5,7 @@ A main file to create an app.
 import streamlit as st
 import pandas as pd
 import cufflinks # used in backend by pandas
-from utils.variables import *
+from utils.constants import *
 
 sidebar = st.sidebar
 

@@ -2,9 +2,6 @@
 To set global variables.
 """
 
-import streamlit as st
-import pandas as pd
-
 file_path = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
 cols = ["continent","location","date","total_cases","new_cases","total_deaths",
             "new_deaths","new_tests",
