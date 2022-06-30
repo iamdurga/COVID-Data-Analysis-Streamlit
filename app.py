@@ -63,8 +63,8 @@ if sidebar.checkbox("Comparison of Locations"):
     accols=[c for c in data.columns if "total" in c]
     ccols = st.multiselect("Select Comparing Columns", options=accols)
     top = sidebar.number_input("Compare Top N", min_value=5,max_value=20,step=1,value=10)
-    order = sidebar.checkbox("Descending")
-    subplots=sidebar.checkbox("Subplots",value=False, key="subplots_compare")
+    order = sidebar.checkbox("Descending", value=True)
+    subplots=sidebar.checkbox("Subplots",value=True, key="subplots_compare")
     if len(ccols)>0:
 
         lrdf = ldf.groupby("location")[ccols].last().reset_index().sort_values(by=ccols,ascending=order)
