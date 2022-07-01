@@ -32,7 +32,7 @@ st.markdown(f"# Currently Selected Location: {location_selector}")
 
 show_data = sidebar.checkbox("Show Data")
 if show_data:    
-    st.dataframe(data)
+    st.dataframe(data.query(f"location=='{location_selector}'"))
     
 
 if sidebar.checkbox("Show Trend"):
